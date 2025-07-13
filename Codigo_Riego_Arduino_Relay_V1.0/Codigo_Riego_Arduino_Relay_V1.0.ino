@@ -3,7 +3,7 @@
 
 //declaramos nuestra variable
 int relay = 8;//pin para el modulo relay
-
+//*****************EL SENSOR DE HUMEDAD DE SUELO SE CONECTO A 3.3V, ESO AFECTA LA MANERA DE SENSAR LA HUMEDAD
 void setup() {
 Serial.begin(9600);//Configuramos la velocidad
 pinMode(relay,OUTPUT);//Declaramos a relay como salida
@@ -18,16 +18,16 @@ if (valor >= 1000){//Si el valor es mayor/igual a 1000
   Serial.println("El sensor esta fuera");//Se mostrará en pantalla
 }
 else if(valor <1000 && valor >= 600){//Si valor es menor o mayor/igual que 600
-  digitalWrite(relay,HIGH);//El relay se prenderá para activar la bomba
+  digitalWrite(relay,0);//El relay se prenderá para activar la bomba
   Serial.println("Seco");//Se mostrará en el monitor serial
 }
 else if(valor < 600 && valor >= 370){//Si valor es menor o mayor/igual que 370
-  digitalWrite(relay,LOW);//Entonces el relay se apagará
+  digitalWrite(relay,1);//Entonces el relay se apagará
   Serial.println("humedo");//Se mostrará en el monitor serial
 }
 else if (valor < 370){//Si valor es menor que 370
   Serial.println("Está en agua");//Se mostrará en pantalla
-  digitalWrite(relay,LOW);//El relay se apagará
+  digitalWrite(relay,1);//El relay se apagará
 }
 delay(1000);//Damos un tiempo de 1sg
 }
