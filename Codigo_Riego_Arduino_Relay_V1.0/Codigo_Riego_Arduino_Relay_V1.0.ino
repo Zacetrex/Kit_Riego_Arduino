@@ -7,7 +7,7 @@ int relay = 7;//pin para el modulo relay
 void setup() {
 Serial.begin(9600);//Configuramos la velocidad
 pinMode(relay,OUTPUT);//Declaramos a relay como salida
-digitalWrite(relay,0);//Apagamos el relay
+digitalWrite(relay,1);//Apagamos el relay
 }
 
 void loop() {
@@ -35,3 +35,4 @@ delay(1000);//Damos un tiempo de 1sg
 }
 //Aclaraciones: Si es con pwm, tiene que estar al minimo antes de subirlo al maximo, si desenchufa
 //estando al max. debe hacer el mismo procedimiento para que la bomba active
+
