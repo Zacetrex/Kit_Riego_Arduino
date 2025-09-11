@@ -2,7 +2,7 @@
 // Este código se hizo con fin de compartirlo con la comunidad y tiene fines educativos
 
 //declaramos nuestra variable
-int relay = 8;//pin para el modulo relay
+int relay = 7;//pin para el modulo relay
 //*****************EL SENSOR DE HUMEDAD DE SUELO SE CONECTO A 3.3V, ESO AFECTA LA MANERA DE SENSAR LA HUMEDAD
 void setup() {
 Serial.begin(9600);//Configuramos la velocidad
