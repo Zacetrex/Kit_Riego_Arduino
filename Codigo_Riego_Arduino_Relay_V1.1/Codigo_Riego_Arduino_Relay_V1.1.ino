@@ -1,5 +1,6 @@
 // Producto de ZACETREX TECHNOLOGIES S.A.C
 // Este código se hizo con fin de compartirlo con la comunidad y tiene fines educativos
+// Más códigos en zacetrex.com
 
 //declaramos nuestra variable
 int relay = 7;//pin para el modulo relay
@@ -35,3 +36,4 @@ delay(1000);//Damos un tiempo de 1sg
 }
 //Aclaraciones: Si es con pwm, tiene que estar al minimo antes de subirlo al maximo, si desenchufa
 //estando al max. debe hacer el mismo procedimiento para que la bomba active
+
